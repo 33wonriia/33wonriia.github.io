@@ -10,7 +10,7 @@ anton
 <html>
   <head>
     <meta charset = "utf-8">
-    <title>網站標題</title>
+    <title>istockphoto-1295967422-612x612.jpg</title>
     <link rel="icon" href="icon.png">
   </head>
   <body>

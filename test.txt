@@ -10,7 +10,7 @@ anton
 <html>
   <head>
     <meta charset = "utf-8">
-    <title>istockphoto.jpg</title>
+    <title>icon.jpg</title>
     <link rel="icon" href="icon.jpg">
   </head>
   <body>

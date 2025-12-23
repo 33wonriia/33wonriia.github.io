@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria's Space</title>
+    <style>
+        body {
+            background-color: #e7e7e7
+            font-family: "Courier New", Courier, monospace
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            min-height: 100vh
+            margin: 0
+            color: #333
+      }
+        container {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border: 2px solid #000;
+            box-shadow: 8px 8px 0px #000
+            max-width: 300px;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            image-rendering: pixelated
+            border: 2px solid #000
+            margin-bottom: 20px
+        }
+
+        h1 {
+            font-size: 24px
+            margin: 10px 0
+            text-transform: uppercase
+        }
+
+        p {
+            font-size: 14px
+            line-height: 1.6
+            margin-bottom: 20px
+        }
+
+        links a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
+            color: white;
+            background-color: #000;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 13px;
+        }
+
+        .links a:hover {
+            background-color: #ff00ff; /* 移上去變霓虹粉色 */
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #555;
+        
+        footer {
+            margin-top: 30px;
+            font-size: 10px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="victoria.png" alt="Victoria Avatar" onerror="this.src='https://via.placeholder.com/150?text=Victoria'">
+        
+        <h1>VICTORIA</h1>
+        <p>Welcome to my digital space.<br>Stay cool.</p>
+
+        <div class="links">
+            <a href="mailto:vivi3798980@gmail.com">EMAIL ME</a>
+            <a href="https://github.com/33wonriia">GITHUB</a>
+        </div>
+    </div>
+
+    <footer>© 2024 Victoria. All rights reserved.</footer>

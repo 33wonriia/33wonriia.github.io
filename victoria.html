@@ -1,5 +1,20 @@
 <!doctype html>
 <html>
+  <div class="music-player">
+    <div class="album-art" id="albumArt">
+        <img src="https://drive.google.com/file/d/1jnP5sAqB4LPeZpoFSljwrVxjnHoVsty5/view?usp=drivesdk" alt="Victoria">
+    </div>
+    
+    <div class="track-info">
+        <p class="song-title">Midnight Mirage</p>
+        <p class="artist-name">RIIZE</p>
+    </div>
+
+    <button id="playBtn" class="play-button">▶️</button>
+
+    <audio id="bgm" src="https://drive.google.com/file/d/1NTBE5YX5iBYUUNADsicsK8wDzNE7yNxN/view?usp=drivesdk" loop></audio>
+</div>
+
   <head>
     <meta charset = "utf-8">
     <title>@victor1a.xu</title>
@@ -17,6 +32,23 @@
             background-size: 40px 40px;
             font-family: sans-serif;
             color: #333;
+
+          const audio = document.getElementById('bgm');
+const playBtn = document.getElementById('playBtn');
+const albumArt = document.getElementById('albumArt').querySelector('img');
+
+playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play()
+        playBtn.innerText = "⏸️"
+        albumArt.classList.add('rotating')
+    } else {
+        audio.pause()
+        playBtn.innerText = "▶️"
+        albumArt.classList.remove('rotating')
+    }
+});
+
         }
       p {
             mar: n:  p;
@@ -35,6 +67,53 @@
             color: #000;
             border-bottom: 1px solid #000;
         }
+      .music-player {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid #ffb6c1;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.album-art img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffb6c1;
+    margin-right: 15px;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.rotating {
+    animation: rotate 5s linear infinite;
+}
+
+.track-info {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.song-title { font-weight: bold; color: #ff69b4; margin: 0; }
+.artist-name { font-size: 12px; color: #888; margin: 0; }
+
+.play-button {
+    background: #ffb6c1;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+}
+
     </style>
 </head>
     <meta charset="UTF-8">

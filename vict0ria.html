@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <div class="music-player">
+    <div class="album-art" id="albumArt">
+        <img src="IMG_4633.jpeg" alt="Victoria">
+    </div>
+    
+    <div class="track-info">
+        <p class="song-title">Midnight Mirage</p>
+        <p class="artist-name">RIIZE</p>
+    </div>
+
+    <button id="playBtn" class="play-button">▶️</button>
+
+    <audio id="bgm" src="mid.mp3" loop></audio>
+</div>
+
+  <head>
+    <meta charset = "utf-8">
+    <title>@victor1a.xu</title>
+    <link rel="icon" href="icon.jpg">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fce6f9;
+            background-image: radial-gradient( #c7c3c6 15%, transparent 16%); 
+            background-size: 40px 40px;
+            font-family: sans-serif;
+            color: #333;
+
+          const audio = document.getElementById('bgm');
+          const playBtn = document.getElementById('playBtn');
+          const albumArt = document.getElementById('albumArt').querySelector('img');
+
+          playBtn.addEventListener('click', function() {
+             if (audio.paused) {
+             audio.play()
+             playBtn.innerText = "⏸️"
+             albumArt.classList.add('rotating')
+             } else {
+             audio.pause()
+             playBtn.innerText = "▶️"
+            albumArt.classList.remove('rotating')
+    }
+});
+
+        }
+      p {
+            mar: n:  p;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+      a {
+            text-decoration: none;
+            color: #666;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+      .music-player {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid #ffb6c1;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.album-art img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffb6c1;
+    margin-right: 15px;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.rotating {
+    animation: rotate 5s linear infinite;
+}
+
+.track-info {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.song-title { font-weight: bold; color: #ff69b4; margin: 0; }
+.artist-name { font-size: 12px; color: #888; margin: 0; }
+
+.play-button {
+    background: #ffb6c1;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me! | victor1a.xu</title>
+    <link rel="stylesheet" href="style.css"> </head>
+    <h1>@𝐯𝐢𝐜𝐭𝐨𝐫𝟏𝐚.𝐱𝐮</h1>
+    <p>♥︎... 𝐑𝐈𝐈𝐙𝐄 - 𝐖𝐎𝐍𝐁𝐈𝐍</p>
+    <p>        𝐈𝐕𝐄 - 𝐑𝐄𝐈</p>
+             
+    <p>    ♡...  𝐍𝐂𝐓 - 𝐓𝐀𝐄𝐘𝐎𝐍𝐆</p>
+    <p>         𝐀𝐓𝐄𝐄𝐙 - 𝐖𝐎𝐎𝐘𝐎𝐔𝐍𝐆 𝐘𝐄𝐎𝐒𝐀𝐍𝐆</p>
+             
+    <p>    ⛧... 狂賭之淵-黃泉月露娜</p>
+    <p>         美少女戰士-海王滿</p>
+
+    <p>    我可能會雷到你的點...</p>
+    <p>         已讀不回 罵髒話 熟了之後講話比較直接</p>
+</div>
+</html>

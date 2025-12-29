@@ -15,20 +15,6 @@
 
 <audio id="bgm" src="midnight.mirage.mp3" loop></audio>
 
-<script>
-function togglePlay() {
-    var audio = document.getElementById("bgm");
-    var btn = document.getElementById("playBtn");
-    
-    if (audio.paused) {
-        audio.play();
-        btn.innerText = "⏸️";
-    } else {
-        audio.pause();
-        btn.innerText = "▶️";
-    }
-}
-</script>
  
 </div>
 
@@ -49,6 +35,32 @@ function togglePlay() {
             background-size: 40px 40px;
             font-family: sans-serif;
             color: #333;
+          
+          <script>
+          function togglePlay() {
+   
+            var audio = document.getElementById("bgm");
+    
+            var btn = document.getElementById("playBtn");
+    
+    
+            if (audio.paused) {
+       
+              audio.play();
+        
+              btn.innerText = "⏸️";
+   
+            } else {
+      
+              audio.pause();
+        
+              btn.innerText = "▶️";
+
+            }
+
+          }
+
+          </script>
 
           const audio = document.getElementById('bgm');
           const playBtn = document.getElementById('playBtn');

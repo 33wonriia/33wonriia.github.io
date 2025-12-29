@@ -1,23 +1,5 @@
 <!doctype html>
 <html>
-  <div class="music-player">
-    <div class="album-art" id="albumArt">
-        <img src="IMG_4633.jpeg" alt="Victoria">
-    </div>
-    
-    <div class="track-info">
-        <p class="song-title">Midnight Mirage</p>
-        <p class="artist-name">RIIZE</p>
-    </div>
-
-    <audio id="bgm" src="mid.mp3" loop></audio>
-    <button id="playBtn" class="play-button" onclick="togglePlay()">▶️</button>
-
-<audio id="bgm" src="midnight.mirage.mp3" loop></audio>
-
- 
-</div>
-
   <head>
     <meta charset = "utf-8">
     <title>@victor1a.xu</title>
@@ -36,6 +18,30 @@
             font-family: sans-serif;
             color: #333;
           
+          <div class="music-player">
+   
+          <div class="album-art" id="albumArt">
+      
+          <img id="playerImg" src="IMG_4633.jpeg" alt="Victoria" style="width:50px; height:50px; border-radius:50%;">
+ 
+          </div>
+
+  
+          <div class="track-info">
+     
+          <p class="song-title">Midnight Mirage</p>
+   
+          <p class="artist-name">RIIZE</p>
+
+          </div>
+
+  
+          <button id="playBtn" class="play-button" onclick="togglePlay()">▶️</button>
+    
+ 
+          <audio id="bgm" src="mid.mp3" loop></audio>
+
+          </div>
           <script>
 
           function togglePlay() {

@@ -13,6 +13,25 @@
     <button id="playBtn" class="play-button">▶️</button>
 
     <audio id="bgm" src="https://github.com/33wonriia/33wonriia.github.io/blob/8c6b1a141883aa42bf181676a7176c596428a856/midnight.mirage.mp3" loop></audio>
+    <button id="playBtn" class="play-button" onclick="togglePlay()">▶️</button>
+
+<audio id="bgm" src="midnight.mirage.mp3" loop></audio>
+
+<script>
+function togglePlay() {
+    var audio = document.getElementById("bgm");
+    var btn = document.getElementById("playBtn");
+    
+    if (audio.paused) {
+        audio.play();
+        btn.innerText = "⏸️";
+    } else {
+        audio.pause();
+        btn.innerText = "▶️";
+    }
+}
+</script>
+ 
 </div>
 
   <head>

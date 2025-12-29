@@ -37,30 +37,53 @@
             color: #333;
           
           <script>
+
           function togglePlay() {
    
             var audio = document.getElementById("bgm");
-    
+   
             var btn = document.getElementById("playBtn");
+   
+            var img = document.getElementById("playerImg");
     
-    
+ 
             if (audio.paused) {
        
-              audio.play();
+              audio.play().then(() => {
+       
+                btn.innerHTML = "⏸️"; 
+          
+                img.style.animation = "spin 4s linear infinite"
+    
+              }).catch(err => {
         
-              btn.innerText = "⏸️";
-   
-            } else {
-      
-              audio.pause();
-        
-              btn.innerText = "▶️";
+                console.log
+       
+                alert
+  
+              });
 
+            } else {
+     
+              audio.pause();
+    
+              btn.innerHTML = "▶️";
+       
+              img.style.animation = "none";
+   
             }
 
           }
 
           </script>
+
+<style>
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+</style>
+
 
           const audio = document.getElementById('bgm');
           const playBtn = document.getElementById('playBtn');

@@ -33,32 +33,38 @@
     margin-bottom: 20px; /* 距離底部一點空間 */
     justify-content: center;
 }
-        .social-btn {
+.social-btn {
     text-decoration: none;
-    background: none;      
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;          
-    height: 60px;
-    border-radius: 12px;    
-    border: 1.5px solid #ffb6c1;
-    overflow: hidden;       
+    display: block;          /* 改成塊狀，讓它變正方形容器 */
+    width: 80px;             /* 你可以調整這個數字來改變按鈕大小 */
+    height: 80px;
+    border-radius: 18px;     /* 圓角正方形的弧度 */
+    border: 2px solid #ffb6c1; /* 粉紅邊框 */
+    overflow: hidden;        /* 這一行最重要！它會切掉照片超出的部分 */
+    padding: 0;              /* 徹底刪除內邊距 */
+    background: none;        /* 刪除背景白色 */
     transition: 0.3s;
-    padding: 0;          
 }
 
 .social-btn img {
-    width: 100%;         
-    height: 100%;         
-    object-fit: cover;      
+    width: 100%;             /* 寬度填滿 */
+    height: 100%;            /* 高度填滿 */
+    object-fit: cover;       /* 核心代碼：讓照片自動裁切填滿，不留白邊 */
     display: block;
 }
 
-        
 .social-btn:hover {
-    transform: scale(1.05);  
+    transform: scale(1.05);  /* 滑鼠移過去微放大 */
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
 }
+
+.social-links {
+    display: flex;
+    gap: 20px;               /* 兩個按鈕之間的距離 */
+    justify-content: center;
+    margin-top: 40px;
+}
+
 
     </style>
 </head>

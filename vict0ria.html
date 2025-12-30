@@ -35,35 +35,38 @@
 }
 .social-btn {
     text-decoration: none;
-    display: block;          /* 改成塊狀，讓它變正方形容器 */
-    width: 80px;             /* 你可以調整這個數字來改變按鈕大小 */
+    display: block;          /* 確保它是一個方塊容器 */
+    width: 80px;             /* 你可以調大或調小按鈕尺寸 */
     height: 80px;
-    border-radius: 18px;     /* 圓角正方形的弧度 */
-    border: 2px solid #ffb6c1; /* 粉紅邊框 */
-    overflow: hidden;        /* 這一行最重要！它會切掉照片超出的部分 */
-    padding: 0;              /* 徹底刪除內邊距 */
-    background: none;        /* 刪除背景白色 */
+    border-radius: 20px;     /* 圓角正方形的弧度 */
+    border: 2px solid #ffb6c1; /* 粉紅外框 */
+    overflow: hidden;        /* 這一行最重要！把照片超出的地方切掉 */
+    padding: 0 !important;   /* 強制刪除所有內邊距 */
+    margin: 0;
     transition: 0.3s;
+    background: #fff;        /* 預防萬一的底色 */
 }
 
 .social-btn img {
-    width: 100%;             /* 寬度填滿 */
-    height: 100%;            /* 高度填滿 */
-    object-fit: cover;       /* 核心代碼：讓照片自動裁切填滿，不留白邊 */
-    display: block;
+    width: 100% !important;  /* 強制寬度撐滿 */
+    height: 100% !important; /* 強制高度撐滿 */
+    object-fit: cover;       /* 核心：照片會像手機桌布一樣自動填滿不變形 */
+    display: block;          /* 消除圖片下方縫隙 */
 }
 
+/* 滑鼠移過去的效果 */
 .social-btn:hover {
-    transform: scale(1.05);  /* 滑鼠移過去微放大 */
-    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.5);
 }
 
 .social-links {
     display: flex;
-    gap: 20px;               /* 兩個按鈕之間的距離 */
+    gap: 20px;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
+
 
 
     </style>

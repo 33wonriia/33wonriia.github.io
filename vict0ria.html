@@ -24,8 +24,31 @@
 
     background-color: #fad7f9;
     background-image: radial-gradient(#b5b1b5 15%, transparent 16%); 
-    background-size: 40px 40px; /* 這裡控制點與點的距離 */
+    background-size: 40px 40px; 
 }
+        .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px; /* 增加與上方文字的距離 */
+    margin-bottom: 20px; /* 距離底部一點空間 */
+    justify-content: center;
+}
+.social-btn {
+    text-decoration: none;
+    background: white;
+    color: #ffb6c1;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1.5px solid #ffb6c1;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.social-btn:hover {
+    background: #ffb6c1;
+    color: white;
+}
+
     </style>
 </head>
 <body>
@@ -50,6 +73,10 @@
      <p>    我可能會雷到你的點...</p>
      <p>         已讀不回 罵髒話 熟了之後講話比較直接</p>
 
+     <div class="social-links">
+        <a href="https://www.instagram.com/victor1a.xu?igsh=YzI4cG5jZ3lxZXY1&utm_source=qr" target="_blank" class="social-btn">Instagram</a>
+        <a href="https://www.threads.com/@victor1a.xu?igshid=NTc4MTIwNjQ2YQ==" target="_blank" class="social-btn">Threads</a>
+    </div>
     <script>
         function toggle() {
             var m = document.getElementById("mus");
